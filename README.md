@@ -11,7 +11,6 @@
 ## Технологии
 - React (с хуками)
 - TypeScript
-- Утилиты для обработки данных
 
 ## Установка и запуск
 1. Клонируйте репозиторий: `git clone https://github.com/your-username/your-repo-name.git`
