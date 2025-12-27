@@ -15,7 +15,7 @@
 ## Установка и запуск
 1. Клонируйте репозиторий: `git clone https://github.com/your-username/your-repo-name.git`
 2. Установите зависимости: `npm install` (или `yarn install`)
-3. Запустите приложение: `npm start`
+3. Запустите приложение: `npm run dev`
 4. Для сборки: `npm run build`
 
 ## Структура проекта
