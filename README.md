@@ -1,73 +1,27 @@
-# React + TypeScript + Vite
+# Traffic Light Objects Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Это приложение для управления объектами светофоров (TLO). Оно позволяет фильтровать, искать, сортировать и обновлять данные о светофорах с использованием React и TypeScript.
 
-Currently, two official plugins are available:
+## Функции
+- Отображение списка TLO с фильтрацией по статусу (активные/неактивные).
+- Поиск по названию.
+- Сортировка по различным критериям.
+- Оптимизированная производительность с memoization.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Технологии
+- React (с хуками)
+- TypeScript
+- Утилиты для обработки данных
 
-## React Compiler
+## Установка и запуск
+1. Клонируйте репозиторий: `git clone https://github.com/your-username/your-repo-name.git`
+2. Установите зависимости: `npm install` (или `yarn install`)
+3. Запустите приложение: `npm start`
+4. Для сборки: `npm run build`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Структура проекта
+- `src/components/TrafficLightObjects.tsx`: Главный компонент.
+- `src/components/MapBox.tsx`: Компонент с картой.
+- `src/functions.ts`: Функции для обработки данных.
+- `tsconfig.json`: Конфигурация TypeScript.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
