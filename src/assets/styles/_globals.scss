@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Hegarty&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+$btn-color: #4f4fff;
+$btn-color-active: #1818b4;
+$text-color: #e2e2e2;
+$text-color-grey: #656565;
+$border: 1px solid #c8c8c8;
+$button-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$text-color-white: #ffffff;
+$text-color-light-grey: #b9b9b9;
+$text-color-dark-grey: #2d2d2d;
+$title-font: "Bebas Neue", sans-serif;
+
+
+@mixin text-title {
+	font-family: $title-font;
+	font-size: 20px;
+	font-weight: 800;
+	color: $text-color-grey
+}
+
+@mixin text {
+	font-family: $title-font;
+	font-size: 16px;
+	font-weight: 500;
+	color: $text-color-grey
+}
+
+@mixin text-small {
+	font-family: $title-font;
+	font-size: 14px;
+	font-weight: 500;
+	color: $text-color-light-grey
+}
+
+@mixin defaultButton {
+	width: 100%;
+	cursor: pointer;
+	padding: 10px;
+	color: $text-color;
+	font-size: 16px;
+	border-radius: 6px;
+	border: $border;
+	box-shadow: $button-shadow;
+	transition: 0.3s ease-in;
+	background-color: $btn-color;
+
+	&:hover {
+		transition: 0.3s ease-in;
+		background-color: $btn-color-active;
+	}
+}
+
+@mixin list_item {
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	gap: 4px;
+	border: $border;
+	border-radius: 6px;
+	padding: 10px;
+	box-shadow: $button-shadow;
+}

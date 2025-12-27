@@ -1,0 +1,113 @@
+@use './globals' as *;
+
+.container {
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	height: 100%;
+}
+
+.tlo {
+	&_circle_icon {
+		width: 16px;
+		height: 16px;
+	}
+
+	&_title {
+		@include text-title
+	}
+
+	&_filters {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		padding: 15px 0;
+	}
+
+	&_checkbox {
+		&_label {
+			@include text;
+		}
+
+		&_input {
+			margin-right: 5px;
+		}
+	}
+
+	&_sort_button {
+		@include defaultButton;
+	}
+
+	&_search {
+		@include text;
+		padding: 10px;
+		border-radius: 6px;
+		outline: none;
+		border: $border;
+		box-shadow: $button-shadow;
+	}
+
+	&_list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		padding-right: 10px;
+		overflow-y: scroll;
+
+		&_item {
+			@include list_item;
+
+			&_active {
+				@include list_item;
+				background-color: $btn-color;
+				color: $text-color-white;
+			}
+
+			&_title {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				@include text-title
+			}
+
+			&_name {
+				font-weight: bold;
+
+				&_active {
+					color: $text-color-white;
+				}
+			}
+
+			&_address {
+				@include text;
+
+				&_avtive {
+					color: $text-color-white
+				}
+			}
+
+			&_status {
+				@include text-small;
+
+				&_avtive {
+					color: $text-color-white
+				}
+
+
+			}
+		}
+	}
+}
+
+@media(max-width: 768px) {
+	.container {
+		width: 100%;
+	}
+
+	.tlo {
+		&_list {
+			overflow: auto;
+		}
+	}
+}
