@@ -6,8 +6,8 @@ export const ICON_GREEN = L.divIcon({
   html: greenSvg,
   className: "custom-marker",
   iconSize: [25, 41],
-  iconAnchor: [12, 41], // Анкор в нижней точке маркера
-  popupAnchor: [0, -41], // Попап над маркером
+  iconAnchor: [12, 41],
+  popupAnchor: [0, -41],
 });
 
 export const ICON_GREY = L.divIcon({

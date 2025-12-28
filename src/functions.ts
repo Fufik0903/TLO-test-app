@@ -1,4 +1,4 @@
-import type { TLO } from "./types";
+import type { TLO, TLOState } from "./types";
 
 export const parseDate = (tlo: any): TLO[] => {
   const newTlo = tlo
